@@ -1,24 +1,21 @@
 //
-//  SignupVC.swift
+//  PhotoVC.swift
 //  instagramclone
 //
-//  Created by MISHAL ALHAJRI on 19/11/1440 AH.
+//  Created by MISHAL ALHAJRI on 20/11/1440 AH.
 //  Copyright © 1440 Torch. All rights reserved.
 //
 
 import UIKit
 
-class SignupVC: UIViewController {
+class PhotoVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
 
-    }
-    
-    @IBAction func alreadyHaveAccountPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     /*
     // MARK: - Navigation
 
