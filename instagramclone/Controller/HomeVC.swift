@@ -7,22 +7,23 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class HomeVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func logoutTapped(_ sender: Any) {
+        do{
+        try
+            Auth.auth().signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+        let storyBoard = UIStoryboard(name: "Start", bundle: nil)
+        let signinVC = storyBoard.instantiateViewController(withIdentifier: "LoginVC")
+        self.present(signinVC,animated: true,completion: nil)
     }
-    */
-
+    
 }
